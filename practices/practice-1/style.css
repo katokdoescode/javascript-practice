@@ -1,0 +1,64 @@
+@layer problem {
+.problem {
+	color-scheme: light dark;
+	font-family: system-ui;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+
+	.form-item {
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+
+		.label {
+			font-weight: bold;
+		}
+
+		.input + .error {
+			display: none;
+		}
+
+		.input[aria-invalid=true] {
+			border-color: var(--color-invalid);
+
+			& + .error {
+				display: block;
+				color: var(--color-invalid);
+				font-size: .8rem;
+				transition-behavior: allow-discrete;
+				transition-property: display;
+				transition-duration: 0.25s;
+			}
+		}
+	}
+
+	button[type="submit"] {
+		width: fit-content;
+	}
+
+	& + .message {
+		display: none;
+	}
+
+	&.success {
+		display: none;
+
+		& + .message {
+			display: block;
+			margin: 0 auto;
+			width: max-content;
+			padding: 1rem;
+			border: 1px solid var(--color-success);
+
+			font-weight: bold;
+		}
+	}
+}
+}

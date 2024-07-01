@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" class="problem" dir="ltr">
+	<head>
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="style.css" />
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="In this problem you need to validate the form, and show validation errors in form."
+		/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<title>🥕 Практика #1 ✨ Валидация формы логина</title>
+	</head>
+	<body>
+		<h1>🐾 Логин</h1>
+		<!-- ! дополнительный класс "success" -->
+		<form id="login-form" action="/" method="post" class="form">
+			<div class="form-item">
+				<label for="username" class="label">Имя пользователя:</label>
+				<input
+					id="username"
+					class="input"
+					type="text"
+					name="username"
+					aria-errormessage="login-error"
+					aria-invalid="false"
+				/>
+				<span id="login-error" class="error"></span>
+			</div>
+
+			<div class="form-item">
+				<label for="password" class="label">Пароль:</label>
+				<input
+					id="password"
+					class="input"
+					type="password"
+					name="password"
+					aria-errormessage="password-error"
+					aria-invalid="false"
+				/>
+				<span id="password-error" class="error"></span>
+			</div>
+
+			<button type="submit">Войти</button>
+		</form>
+
+		<div class="message">
+			<pre>
+      |\      _,,,---,,_
+ZZZzz /,`.-'`'    -.  ;-;;,_
+     |,4-  ) )-,_. ,\ (  `'-'
+    '---''(_/--'  `-'\_)  Welcome!
+	</pre
+			>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

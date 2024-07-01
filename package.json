@@ -1,0 +1,27 @@
+{
+  "name": "javascript-practice",
+  "version": "1.0.0",
+  "description": "Сборник практических заданий по JavaScript.",
+  "scripts": {
+    "start": "vite serve --port='3399'",
+    "test-all": "playwright test",
+    "test": "playwright test ./tests/${1}.spec.js",
+    "format": "biome format --write ./practices/",
+    "lint": "biome lint --error-on-warnings ./practices/"
+  },
+  "keywords": [
+    "education",
+    "javascript",
+    "practice"
+  ],
+  "author": "@katokdoescode",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.45.0",
+    "vite": "^5.3.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@playwright/test": "^1.45.0"
+  }
+}
